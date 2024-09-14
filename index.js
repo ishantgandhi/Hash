@@ -9,7 +9,7 @@ app.use(express.json());
 
 mongoose
   .connect(
-    "mongodb+srv://igandhi:trisha7102@hash.dyqdd.mongodb.net/Hash?retryWrites=true&w=majority&appName=Hash"
+    "mongodb+srv://ishant:trisha7102@hash.z8gzs.mongodb.net/?retryWrites=true&w=majority&appName=Hash"
   )
   .then(() => {
     console.log("Connected to MongoDB");
@@ -37,6 +37,12 @@ app.get("/lc/:username", async (req, res) => {
           }
         }
       }
+       activeDailyCodingChallengeQuestion {
+        link
+        question {
+          title
+        }
+      }
     }
   `;
 
@@ -49,17 +55,22 @@ app.get("/lc/:username", async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
 
+    const dailyLink = response.data.data.activeDailyCodingChallengeQuestion.link
+    const dailyTitle = response.data.data.activeDailyCodingChallengeQuestion.question.title
     const userProfile = response.data.data.matchedUser.profile;
     const userAvatar = userProfile.userAvatar;
     const userRanking = userProfile.ranking;
     const realName = userProfile.realName;
-    const solvedProblems =response.data.data.matchedUser.submitStats.acSubmissionNum;
+    const solvedProblems =
+      response.data.data.matchedUser.submitStats.acSubmissionNum;
 
     const easy = solvedProblems.find((d) => d.difficulty === "Easy").count;
     const medium = solvedProblems.find((d) => d.difficulty === "Medium").count;
     const hard = solvedProblems.find((d) => d.difficulty === "Hard").count;
 
     const result = {
+      challenge: dailyTitle,
+      challengeLink: dailyLink,
       userName: realName,
       profilePic: userAvatar,
       rank: userRanking,
@@ -111,7 +122,6 @@ app.post("/time", async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-
 
 app.get("/time/:name", async (req, res) => {
   try {
