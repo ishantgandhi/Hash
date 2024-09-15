@@ -6,11 +6,10 @@ const mongoose = require("mongoose");
 const DSA = require("./models/ds.model");
 const Time = require("./models/dstime.model");
 app.use(express.json());
+require("dotenv").config();
 
 mongoose
-  .connect(
-    "mongodb+srv://ishant:trisha7102@hash.z8gzs.mongodb.net/?retryWrites=true&w=majority&appName=Hash"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to MongoDB");
   })
@@ -55,8 +54,10 @@ app.get("/lc/:username", async (req, res) => {
       return res.status(404).json({ error: "User not found" });
     }
 
-    const dailyLink = response.data.data.activeDailyCodingChallengeQuestion.link
-    const dailyTitle = response.data.data.activeDailyCodingChallengeQuestion.question.title
+    const dailyLink =
+      response.data.data.activeDailyCodingChallengeQuestion.link;
+    const dailyTitle =
+      response.data.data.activeDailyCodingChallengeQuestion.question.title;
     const userProfile = response.data.data.matchedUser.profile;
     const userAvatar = userProfile.userAvatar;
     const userRanking = userProfile.ranking;
