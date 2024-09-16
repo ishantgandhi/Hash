@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 const index = () => {
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-3xl">index</Text>
+      <Text className="text-3xl font-pthin">index</Text>
       <StatusBar style="auto" />
     </View>
   );
