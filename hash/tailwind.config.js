@@ -3,6 +3,15 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./<custom directory>/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      height: {
+        '35/8': '70px', 
+      },
+      width: {
+        '85/4': '340px', 
+      },
+      colors: { 
+        'primary': "#C6EEEE",
+      },
       fontFamily: {
         pthin: ["Poppins-Thin", "sans-serif"],
         pextralight: ["Poppins-ExtraLight", "sans-serif"],
