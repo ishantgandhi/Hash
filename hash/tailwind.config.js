@@ -15,6 +15,7 @@ module.exports = {
         "tertiary": "#70A7A7",
         "quaternary": "#116D6D",
         "alternative": "#F8ABAB",
+        "card": "#F9F9F9",
         
       },
       fontFamily: {

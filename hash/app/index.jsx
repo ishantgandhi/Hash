@@ -13,7 +13,7 @@ const index = () => {
     <SafeAreaView className="flex-1">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <NavBar />
-        <View className="flex-1 justify-center items-center px-5 py-7 border">
+        <View className="flex-1 justify-center items-center px-5 py-7 ">
           <View className="items-center h-full w-full ">
             <UserCard />
             <DailyCard />
