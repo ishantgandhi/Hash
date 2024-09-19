@@ -4,7 +4,7 @@ import TreeIcon from "../svg/TreeIcon";
 
 const GuideCard = () => {
   return (
-    <View className="mb-9 w-full h-44 bg-gray-200 border rounded-xl items-center justify-center overflow-hidden ">
+    <View className="mb-9 w-full h-40 bg-gray-200 border rounded-xl items-center justify-center overflow-hidden ">
       <View className="absolute items-center justify-center z-0 opacity-50">
         <TreeIcon />
       </View>
