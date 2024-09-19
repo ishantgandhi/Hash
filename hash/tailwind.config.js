@@ -11,6 +11,11 @@ module.exports = {
       },
       colors: { 
         'primary': "#C6EEEE",
+        "secondary": "#60CECE",
+        "tertiary": "#70A7A7",
+        "quaternary": "#116D6D",
+        "alternative": "#F8ABAB",
+        
       },
       fontFamily: {
         pthin: ["Poppins-Thin", "sans-serif"],
