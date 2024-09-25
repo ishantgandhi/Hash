@@ -9,7 +9,7 @@
 // const index = () => {
 //   return (
 //     <SafeAreaView className="h-full">
-//       <ScrollView contentContainerStyle={{ height: "100%" }}>
+//       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
 //         <View className="flex-1 justify-center items-center px-9">
 //           <View className="justify-center items-center mb-5 w-full">
 //             <AppIcon />
