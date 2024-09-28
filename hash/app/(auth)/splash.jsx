@@ -3,12 +3,12 @@
 // import { StatusBar } from "expo-status-bar";
 // import { LinearGradient } from "expo-linear-gradient";
 // import { SafeAreaView } from "react-native-safe-area-context";
-// import Hlogo from "./svg/hlogo";
+// import Hlogo from "./svg/Hlogo";
 
 // const index = () => {
 //   return (
 //     <LinearGradient
-//       colors={["#FFFFFF", "#1CBABA"]}
+//       colors={["#B084FC", "#E6D9FF"]}
 //       start={{ x: 0.05, y: 0.1 }}
 //       end={{ x: 0, y: 1.5 }}
 //       className="h-full"
