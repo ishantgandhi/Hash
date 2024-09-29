@@ -1,12 +1,22 @@
-import { Animated, View } from "react-native";
+import {
+  Animated,
+  View,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 import React, { useEffect, useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import { Link } from 'expo-router';
 import Splash from "./splash.jsx";
+import { SafeAreaView } from "react-native-safe-area-context";
+import AppIcon from "./svg/AppIcon";
+import LCIcon from "./svg/LCIcon";
+import { StatusBar } from "expo-status-bar";
+import { useRouter } from 'expo-router'; 
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const fadeAnim = useState(new Animated.Value(1))[0];
+  const router = useRouter(); 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,7 +24,9 @@ const Index = () => {
         toValue: 0,
         duration: 1000,
         useNativeDriver: true,
-      }).start(() => setIsLoading(false));
+      }).start(() => {
+        setIsLoading(false);
+      });
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -29,10 +41,25 @@ const Index = () => {
   }
 
   return (
-    <View className="flex-1 items-center justify-center">
-      <StatusBar style="auto" />
-      <Link href="/(tabs)/home" className="text-blue-500 text-3xl">Home</Link>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar style="dark" />
+      <View className="flex-1 justify-center items-center px-9">
+        <View className="justify-center items-center mb-5 w-full">
+          <AppIcon />
+          <Text className="text-5xl font-pmedium mt-5">Hash</Text>
+        </View>
+      </View>
+      <View className="w-5/6 mb-10 px-2 self-center">
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={() => router.push('./login')}
+          className="h-16 bg-h200 rounded-xl justify-center items-center flex-row"
+        >
+          <Text className="text-xl font-pmedium">Login With</Text>
+          <LCIcon className="ml-2 mb-2" />
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
