@@ -1,29 +1,29 @@
-// import { Image, ScrollView, Text, View, TextInput } from "react-native";
-// import React from "react";
-// import { StatusBar } from "expo-status-bar";
-// import { SafeAreaView } from "react-native-safe-area-context";
-// import NavBar from "./components/NavBar";
-// import UserCard from "./components/UserCard";
-// import DailyCard from "./components/DailyCard";
-// import GuideCard from "./components/GuideCard";
-// import QuizCard from "./components/QuizCard";
+import { Image, ScrollView, Text, View,} from "react-native";
+import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import UserCard from "../components/UserCard";
+import DailyCard from "../components/DailyCard";
+import GuideCard from "../components/GuideCard";
+import ComplexityCard from "../components/ComplexityCard";
 
-// const index = () => {
-//   return (
-//     <SafeAreaView className="flex-1">
-//       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-//         <NavBar />
-//         <View className="flex-1 justify-center items-center px-5 py-7 ">
-//           <View className="items-center h-full w-full ">
-//             <UserCard />
-//             <DailyCard />
-//             <GuideCard />
-//             <QuizCard />
-//           </View>
-//         </View>
-//       </ScrollView>
-//     </SafeAreaView>
-//   );
-// };
+const Home = () => {
+  return (
+    <SafeAreaView className="flex-1 bg-white">
+        <View className="py-12 px-6 flex-1">
+          <Text className="text-3xl font-pregular">
+            Hello, <Text className="font-psemibold">Ishant</Text>
+          </Text>
+          <View className="mt-7">
+            <UserCard />
+            <DailyCard />
+            <View className="flex-row justify-between">
+              <GuideCard />
+              <ComplexityCard />
+            </View>
+          </View>
+        </View>
+    </SafeAreaView>
+  );
+};
 
-// export default index;
+export default Home;

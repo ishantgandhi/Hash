@@ -5,7 +5,7 @@
 // import { SafeAreaView } from "react-native-safe-area-context";
 // import Hlogo from "./svg/Hlogo";
 
-// const index = () => {
+// const Splash = () => {
 //   return (
 //     <LinearGradient
 //       colors={["#B084FC", "#E6D9FF"]}
@@ -24,4 +24,4 @@
 //   );
 // };
 
-// export default index;
+// export default Splash;

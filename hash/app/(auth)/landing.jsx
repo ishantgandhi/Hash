@@ -6,7 +6,7 @@
 // import AppIcon from "./svg/AppIcon";
 // import LCIcon from "./svg/LCIcon";
 
-// const index = () => {
+// const Landing = () => {
 //   return (
 //     <SafeAreaView className="h-full">
 //       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
@@ -27,4 +27,4 @@
 //   );
 // };
 
-// export default index;
+// export default Landing;

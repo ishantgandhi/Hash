@@ -5,7 +5,7 @@
 // import { SafeAreaView } from "react-native-safe-area-context";
 // import AppIcon from "./svg/AppIcon";
 
-// const index = () => {
+// const Login = () => {
 //   return (
 //     <SafeAreaView className="flex-1">
 //       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
@@ -28,4 +28,4 @@
 //   );
 // };
 
-// export default index;
+// export default Login;
