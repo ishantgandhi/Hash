@@ -1,4 +1,4 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -15,24 +15,23 @@ const data = [
 
 const Guide = () => {
   const renderItem = ({ item }) => (
-    <View className="items-center bg-primary w-40 h-40 border rounded-2xl mr-5 mb-8 justify-center">
+    <TouchableOpacity className="items-center bg-h300 w-40 h-40 border rounded-2xl mr-5 mb-8 justify-center">
       <View className="w-24 h-24 bg-secondary rounded-md mb-2" />
-      <Text className="text-center font-pmedium text-xl">{item.label}</Text>
-    </View>
+      <Text className="text-center text-h800 font-pmedium text-xl">{item.label}</Text>
+    </TouchableOpacity>
   );
 
   return (
     <SafeAreaView className="flex-1">
-      <View className="flex-1 items-center px-5 py-7 pb-0 ">
-        <Text className="text-3xl font-pmedium text-center mb-5">
-          Data Structures Guide
-        </Text>
+      <View className="flex-1 items-center px-5 pt-7 pb-20 ">
+        <Text className="text-3xl font-pmedium mb-5">Data Structures Guide</Text>
         <FlatList
           data={data}
           numColumns={2}
           keyExtractor={(item) => item.id}
           renderItem={renderItem}
-          contentContainerStyle={{ justifyContent: "space-between" }}
+          contentContainerStyle={{ justifyContent: "space-between" }
+        }
         />
       </View>
     </SafeAreaView>

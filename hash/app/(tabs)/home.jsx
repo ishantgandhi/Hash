@@ -3,8 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import UserCard from "../components/UserCard";
 import DailyCard from "../components/DailyCard";
-import GuideCard from "../components/GuideCard";
-import ComplexityCard from "../components/ComplexityCard";
+import AlgoCard from "../components/AlgoCard";
 
 const Home = () => {
   return (
@@ -17,8 +16,7 @@ const Home = () => {
             <UserCard />
             <DailyCard />
             <View className="flex-row justify-between">
-              <GuideCard />
-              <ComplexityCard />
+              <AlgoCard />
             </View>
           </View>
         </View>

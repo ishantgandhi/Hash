@@ -50,9 +50,9 @@ const TabsLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="quiz"
+        name="guide"
         options={{
-          title: "Quiz",
+          title: "Guide",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons 

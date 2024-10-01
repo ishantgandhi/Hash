@@ -1,7 +1,7 @@
 import { FlatList, Text, View, ScrollView } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import NavBar from "./components/NavBar";
+
 
 const DSAItem = () => {
   return (
