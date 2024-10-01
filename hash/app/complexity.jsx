@@ -7,7 +7,6 @@ const Complexity = () => {
   return (
     <SafeAreaView className="flex-1">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <NavBar />
         <View className="flex-1 px-5 py-7">
           <Text className="text-4xl font-pmedium mb-1">Linked List</Text>
           <Text className="text-lg text-stone-400 font-pregular mb-6">

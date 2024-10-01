@@ -1,4 +1,5 @@
 import { FlatList, Text, View, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -14,8 +15,17 @@ const data = [
 ];
 
 const Guide = () => {
+  const router = useRouter();
+
+  const handlePress = () => {
+    router.push("../dsaitem");
+  };
+
   const renderItem = ({ item }) => (
-    <TouchableOpacity className="items-center bg-h300 w-40 h-40 border rounded-2xl mr-5 mb-8 justify-center">
+    <TouchableOpacity
+      onPress={handlePress}
+      className="items-center bg-h300 w-40 h-40 border rounded-2xl mr-5 mb-8 justify-center"
+    >
       <View className="w-24 h-24 bg-secondary rounded-md mb-2" />
       <Text className="text-center text-h800 font-pmedium text-xl">{item.label}</Text>
     </TouchableOpacity>
@@ -30,8 +40,7 @@ const Guide = () => {
           numColumns={2}
           keyExtractor={(item) => item.id}
           renderItem={renderItem}
-          contentContainerStyle={{ justifyContent: "space-between" }
-        }
+          contentContainerStyle={{ justifyContent: "space-between" }}
         />
       </View>
     </SafeAreaView>

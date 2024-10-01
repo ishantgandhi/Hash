@@ -7,7 +7,6 @@ const DSAItem = () => {
   return (
     <SafeAreaView className="flex-1">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <NavBar />
         <View className="flex-1 px-5 py-7">
           <Text className="text-3xl font-pmedium mb-1">Linked List</Text>
           <Text className="text-xl text-stone-400 font-pmedium mb-5">

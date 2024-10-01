@@ -36,7 +36,7 @@ const _layout = () => {
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="login" options={{ headerShown: false }} />
-      <Stack.Screen name="guide" options={{ headerShown: false }} />
+      <Stack.Screen name="dsaitem" options={{ headerShown: false }} />
     </Stack>
   );
 };
