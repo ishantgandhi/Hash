@@ -1,5 +1,5 @@
 import { FlatList, Text, View, TouchableOpacity } from "react-native";
-import { useRouter } from "expo-router";
+import { Link } from "expo-router";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -15,26 +15,23 @@ const data = [
 ];
 
 const Guide = () => {
-  const router = useRouter();
-
-  const handlePress = () => {
-    router.push("../dsaitem");
-  };
-
   const renderItem = ({ item }) => (
-    <TouchableOpacity
-      onPress={handlePress}
-      className="items-center bg-h300 w-40 h-40 border rounded-2xl mr-5 mb-8 justify-center"
-    >
-      <View className="w-24 h-24 bg-secondary rounded-md mb-2" />
-      <Text className="text-center text-h800 font-pmedium text-xl">{item.label}</Text>
-    </TouchableOpacity>
+    <Link href={"/(tabs)/one/dsaitem"} asChild>
+      <TouchableOpacity className="items-center bg-h300 w-40 h-40 border rounded-2xl mr-5 mb-8 justify-center">
+        <View className="w-24 h-24 bg-secondary rounded-md mb-2" />
+        <Text className="text-center text-h800 font-pmedium text-xl">
+          {item.label}
+        </Text>
+      </TouchableOpacity>
+    </Link>
   );
 
   return (
     <SafeAreaView className="flex-1">
       <View className="flex-1 items-center px-5 pt-7 pb-20 ">
-        <Text className="text-3xl font-pmedium mb-5">Data Structures Guide</Text>
+        <Text className="text-3xl font-pmedium mb-5">
+          Data Structures Guide
+        </Text>
         <FlatList
           data={data}
           numColumns={2}

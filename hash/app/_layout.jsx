@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
 
+
 SplashScreen.preventAutoHideAsync();
 
 const _layout = () => {
@@ -36,6 +37,7 @@ const _layout = () => {
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="login" options={{ headerShown: false }} />
+     
 
     </Stack>
   );
