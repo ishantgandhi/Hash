@@ -28,14 +28,14 @@ const DailyCard = () => {
           color="#FFA500"
         />
       </View>
-      <Text className="text-3xl font-pmedium text-center mb-2">
+      <Text className="text-3xl font-pmedium text-center mb-5">
         Daily Question
       </Text>
-      <Text className="text-2xl font-pregular text-center mb-2">
+      <Text className="text-2xl font-pregular text-center">
         {parsedUserData.challenge}
       </Text>
       <View className="flex-row self-end items-center">
-        <Text className="text-xl font-psemibold text-amber-500 text-center absolute top-10 right-1">
+        <Text className="text-xl font-psemibold text-amber-500 text-center fixed top-7 right-1">
           100
         </Text>
       </View>
