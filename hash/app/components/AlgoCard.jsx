@@ -4,10 +4,8 @@ import TreeIcon from "../svg/TreeIcon";
 import {useRouter} from 'expo-router';
 
 const AlgoCard = () => {
-  const router = useRouter();
   return (
     <TouchableOpacity 
-    onPress={() => router.navigate("../guide")}
     activeOpacity={0.5}
     className="mb-9 w-full h-44 border-2 border-h900 bg-h300 rounded-xl p-4 justify-center overflow-hidden ">
       <View className="absolute  z-0 opacity-50 self-end ">

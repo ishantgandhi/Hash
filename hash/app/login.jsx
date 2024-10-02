@@ -1,18 +1,24 @@
-import { ScrollView, Text, View, TextInput, TouchableOpacity } from "react-native";
+import {
+  Image,
+  ScrollView,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import React, { useState } from "react";
-import { useRouter } from 'expo-router';
+import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AppIcon from "./svg/AppIcon";
 
 const Login = () => {
   const router = useRouter();
-  const [username, setUsername] = useState(''); 
-  const [error, setError] = useState('');
-  const [userData, setUserData] = useState(null); 
+  const [username, setUsername] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogin = async () => {
     if (!username) {
-      setError('No username entered');
+      setError("Please enter a valid username");
       return;
     }
 
@@ -21,18 +27,20 @@ const Login = () => {
       const data = await response.json();
 
       if (response.status === 404) {
-        setError('No User');
+        setError("User not found");
         return;
       }
 
-      console.log(data);
+      // console.log(data);
 
-      setUserData(data);
 
-      router.push('./(tabs)/home', { userData: data });
+      router.push({
+        pathname: "./(tabs)/home",
+        params: { userData: JSON.stringify(data) }, 
+      });
     } catch (error) {
-      setError('Error fetching user data');
-      console.error('Error fetching user data:', error);
+      setError("Error fetching user data");
+      console.error("Error fetching user data:", error);
     }
   };
 
@@ -46,17 +54,18 @@ const Login = () => {
               className="bg-hCard bg-gray-200 border border-gray-300 rounded-lg w-5/6 h-16 mt-5 px-5 font-pmedium text-black"
               placeholder="Enter Leetcode Username"
               value={username}
-              onChangeText={setUsername} 
-              autoCapitalize="none" 
+              onChangeText={setUsername}
+              autoCapitalize="none"
             />
-            {error ? <Text style={{ color: 'red' }}>{error}</Text> : null}
+            {error ? <Text style={{ color: "red" }}>{error}</Text> : null}
           </View>
         </View>
-        <TouchableOpacity 
+        <TouchableOpacity
           activeOpacity={0.5}
-          onPress={handleLogin} 
-          className="w-5/6 mb-10 px-2 self-center">
-          <View className=" h-16 bg-h200 rounded-xl justify-center items-center flex-row ">
+          onPress={handleLogin}
+          className="w-5/6 mb-10 px-2 self-center"
+        >
+          <View className="h-16 bg-h200 rounded-xl justify-center items-center flex-row">
             <Text className="text-xl font-pmedium">Login</Text>
           </View>
         </TouchableOpacity>
