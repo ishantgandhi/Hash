@@ -7,6 +7,7 @@ const _layout = () => {
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="dsaitem" options={{ headerShown: false }} /> 
+      <Stack.Screen name="complexity" options={{ headerShown: false }} /> 
     </Stack>
   );
 };

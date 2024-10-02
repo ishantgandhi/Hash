@@ -8,8 +8,8 @@ const Complexity = () => {
     <SafeAreaView className="flex-1">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View className="flex-1 px-5 py-7">
-          <Text className="text-4xl font-pmedium mb-1">Linked List</Text>
-          <Text className="text-lg text-stone-400 font-pregular mb-6">
+          <Text className="text-3xl font-pmedium mb-1">Linked List</Text>
+          <Text className="text-xl text-h400 font-pmedium mb-6">
             Time Complexity
           </Text>
           <View className="w-full h-full">
@@ -24,9 +24,9 @@ const Complexity = () => {
                 { key: "O(n!)", value: "Factorial Time" },
               ]}
               renderItem={({ item }) => (
-                <View className="flex flex-row justify-between items-center border-b h-20 p-3">
-                  <Text className="text-2xl font-pmedium">{item.value}</Text>
-                  <Text className="text-2xl font-pmedium text-cyan-500">{item.key}</Text>
+                <View className="flex flex-row justify-between items-center border-b h-20 ">
+                  <Text className="text-xl font-pmedium">{item.value}</Text>
+                  <Text className="text-xl font-pmedium text-h500">{item.key}</Text>
                 </View>
               )}
             />

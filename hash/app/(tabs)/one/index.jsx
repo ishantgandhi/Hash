@@ -18,8 +18,7 @@ const Guide = () => {
   const renderItem = ({ item }) => (
     <Link href={"/(tabs)/one/dsaitem"} asChild>
       <TouchableOpacity className="items-center bg-h300 w-40 h-40 border rounded-2xl mr-5 mb-8 justify-center">
-        <View className="w-24 h-24 bg-secondary rounded-md mb-2" />
-        <Text className="text-center text-h800 font-pmedium text-xl">
+        <Text className="text-center text-h800 font-pmedium text-2xl">
           {item.label}
         </Text>
       </TouchableOpacity>
