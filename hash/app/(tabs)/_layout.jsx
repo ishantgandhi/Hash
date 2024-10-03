@@ -56,7 +56,7 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <MaterialIcons
-                name="quiz"
+                name="auto-stories"
                 size={30}
                 color={focused ? "#4a1c87" : "#b084fc"}
               />
