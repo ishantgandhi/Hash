@@ -32,7 +32,6 @@ const Guide = () => {
         <FlatList
           data={data}
           numColumns={2}
-          keyExtractor={(item) => item.id}
           renderItem={renderItem}
           contentContainerStyle={{ justifyContent: "space-between" }}
         />

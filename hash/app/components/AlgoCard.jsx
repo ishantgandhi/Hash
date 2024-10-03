@@ -11,7 +11,7 @@ const AlgoCard = () => {
       <View className="absolute  z-0 opacity-50 self-end ">
         <TreeIcon />
       </View>
-      <Text className="text-3xl w-1/2 font-psemibold text-left z-10 text-h900">
+      <Text className="text-3xl w-1/2 font-pmedium text-left z-10 text-h900">
         Popular Algorithms
       </Text>
     </TouchableOpacity>

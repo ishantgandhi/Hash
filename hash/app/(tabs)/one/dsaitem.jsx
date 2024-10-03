@@ -45,8 +45,8 @@ const DSAItem = () => {
         {dsaData ? (
           <>
             <View className="px-5 pt-7 pb-24">
-              <Text className="text-3xl font-pmedium mb-1">{dsaData.name}</Text>
-              <Text className="text-xl text-h400 font-pmedium mb-5">
+              <Text className="text-3xl font-psemibold mb-1">{dsaData.name}</Text>
+              <Text className="text-xl text-h400 font-pregular mb-5">
                 Data Structure
               </Text>
               <Text className="text-lg font-pmedium mb-5">
@@ -59,7 +59,7 @@ const DSAItem = () => {
                 </Text>
               </View>
               <View className="w-full flex-row justify-between px-1 rounded-xl mb-5">
-                <Link href={"/(tabs)/one/complexity"} asChild>
+                <Link href={{pathname: "/(tabs)/one/complexity", params: { id: id }}} asChild>
                   <TouchableOpacity className=" bg-h300 w-44 h-40 border rounded-2xl">
                     <Text className="text-xl font-pmedium m-4">
                       Time Complexity
