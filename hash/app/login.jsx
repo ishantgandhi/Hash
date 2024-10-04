@@ -36,7 +36,9 @@ const Login = () => {
 
       router.push({
         pathname: "./(tabs)/home",
-        params: { userData: JSON.stringify(data) }, 
+        params: { userData: JSON.stringify(data),
+          userId : username
+        }, 
       });
     } catch (error) {
       setError("Error fetching user data");

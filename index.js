@@ -72,6 +72,7 @@ app.get("/lc/:username", async (req, res) => {
       challenge: dailyTitle,
       challengeLink: dailyLink,
       userName: realName,
+      
       rank: userRanking,
       solved: {
         easy: easy,

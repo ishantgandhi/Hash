@@ -8,13 +8,14 @@ import { useLocalSearchParams } from "expo-router";
 
 const Home = () => {
   const { userData } = useLocalSearchParams(); 
+  const { userId } = useLocalSearchParams();
   
   try {
     parsedUserData = userData ? JSON.parse(userData) : {};
   } catch (error) {
     console.error("Error:", error);
   }
-  const userName = parsedUserData.userName.split(" ")[0]
+  const userName = parsedUserData.userName ? parsedUserData.userName.split(" ")[0] : userId;
   // console.log(userName);
 
   return (
