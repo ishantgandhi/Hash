@@ -5,6 +5,7 @@ const port = 3000;
 const mongoose = require("mongoose");
 const DSA = require("./models/ds.model");
 const Time = require("./models/dstime.model");
+const Algo  =  require("./models/algo.model");
 app.use(express.json());
 require("dotenv").config();
 
@@ -17,6 +18,7 @@ mongoose
     console.log("Connection Failed", err);
   });
 
+// LeetCode API
 app.get("/lc/:username", async (req, res) => {
   const username = req.params.username;
 
@@ -91,6 +93,7 @@ app.get("/lc/:username", async (req, res) => {
   }
 });
 
+// Data Structure API
 app.post("/dsa", async (req, res) => {
   const newStructure = new DSA(req.body);
   try {
@@ -113,6 +116,7 @@ app.get("/dsa/:name", async (req, res) => {
   }
 });
 
+// Time Complexity API
 app.post("/time", async (req, res) => {
   const newComplexity = new Time(req.body);
   try {
@@ -123,6 +127,7 @@ app.post("/time", async (req, res) => {
   }
 });
 
+
 app.get("/time/:name", async (req, res) => {
   try {
     const item = await Time.findOne({ dsaName: req.params.name });
@@ -130,6 +135,27 @@ app.get("/time/:name", async (req, res) => {
       return res.status(404).json({ message: "Data structure not found" });
     }
     res.status(200).json(item);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+
+// Algorithm API
+app.post("/algo", async (req, res) => {
+  const newAlgo = new Algo(req.body);
+  try {
+    await newAlgo.save();
+    res.status(201).json(newAlgo);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+app.get("/algo/getAll", async (req, res) => {
+  try {
+    const items = await Algo.find();
+    res.status(200).json(items);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
