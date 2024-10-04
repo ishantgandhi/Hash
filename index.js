@@ -26,7 +26,6 @@ app.get("/lc/:username", async (req, res) => {
         username
         profile {
           ranking
-          userAvatar
           realName
         }
         submitStats {
@@ -73,7 +72,7 @@ app.get("/lc/:username", async (req, res) => {
       challenge: dailyTitle,
       challengeLink: dailyLink,
       userName: realName,
-      profilePic: userAvatar,
+      
       rank: userRanking,
       solved: {
         easy: easy,
