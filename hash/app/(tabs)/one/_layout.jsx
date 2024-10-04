@@ -8,7 +8,6 @@ const _layout = () => {
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="dsaitem" options={{ headerShown: false }} /> 
       <Stack.Screen name="complexity" options={{ headerShown: false }} /> 
-      <Stack.Screen name="algos" options={{ headerShown: false }} /> 
     </Stack>
   );
 };
