@@ -19,7 +19,7 @@ const DailyCard = () => {
 
   return (
     <TouchableOpacity
-     className="mb-9 w-full h-44 rounded-xl overflow-hidden bg-gray-200 p-4 relative">
+     className="mb-9 w-full h-auto rounded-xl overflow-hidden bg-gray-200 p-3 relative">
       <View style={{ position: "absolute", right: 0, bottom: -10 }}>
         <Flame
           name="fire"
@@ -35,7 +35,7 @@ const DailyCard = () => {
         {parsedUserData.challenge}
       </Text>
       <View className="flex-row self-end items-center">
-        <Text className="text-xl font-psemibold text-amber-500 text-center fixed top-7 right-1">
+        <Text className="text-xl font-psemibold text-amber-500 text-center fixed">
           100
         </Text>
       </View>

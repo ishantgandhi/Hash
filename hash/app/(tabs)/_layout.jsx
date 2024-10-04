@@ -15,7 +15,7 @@ const TabsLayout = () => {
           tabBarInactiveTintColor: "#b084fc",
           tabBarStyle: {
             position: "absolute",
-            bottom: 50,
+            bottom: 40,
             left: 20,
             right: 20,
             borderRadius: 20,

@@ -16,7 +16,7 @@ const UserCard = () => {
   }
   // console.log("test: ",parsedUserData);
   return (
-    <View className="mb-9 w-full h-44 bg-gray-200 rounded-xl items-center flex-row overflow-hidden">
+    <View className="mb-9 w-full h-auto bg-gray-200 rounded-xl items-center flex-row overflow-hidden">
       <View className="ml-3 p-3">
         <Text className="text-xl font-pregular">#{parsedUserData.rank}</Text>
         <View className="flex">
