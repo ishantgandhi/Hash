@@ -17,6 +17,11 @@ const _layout = () => {
     "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
     "Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Thin": require("../assets/fonts/Poppins-Thin.ttf"),
+    "Courier-Prime-Bold": require("../assets/fonts/CourierPrime-Bold.ttf"),
+    "Courier-Prime-BoldItalic": require("../assets/fonts/CourierPrime-BoldItalic.ttf"),
+    "Courier-Prime-Italic": require("../assets/fonts/CourierPrime-Italic.ttf"),
+    "Courier-Prime": require("../assets/fonts/CourierPrime-Regular.ttf"),
+
   });
 
   useEffect(() => {
