@@ -15,8 +15,8 @@ const CodeDisplay = () => {
           <Text className="text-xl text-h400 font-pregular mb-5">
             View the Code 
           </Text>
-          <View className="border p-2 bg-h200 rounded-xl ">
-            <Text className="text-lg font-cprime mb-5 text-h800">{code}</Text>
+          <View className="border p-2 bg-h200 rounded-xl border-h800 mb-10">
+            <Text className="text-lg font-cprime text-h800 whitespace-pre-wrap">{code}</Text>
           </View>
         </View>
       </ScrollView>

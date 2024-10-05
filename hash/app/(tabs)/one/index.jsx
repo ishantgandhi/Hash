@@ -4,7 +4,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const data = [
-  { id: "arrays", label: "Arrays" },
+  { id: "array", label: "Arrays" },
   { id: "hashmaps", label: "Hash Maps" },
   { id: "linkedlist", label: "Linked List" },
   { id: "stack", label: "Stack" },
