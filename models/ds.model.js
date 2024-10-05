@@ -19,7 +19,7 @@ const dataStructureSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    link: {
+    code: {
         type: String,
         required: true
     }

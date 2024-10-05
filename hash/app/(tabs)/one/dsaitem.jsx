@@ -38,14 +38,18 @@ const DSAItem = () => {
           <>
             <View className="flex-1 justify-center items-center px-2">
               <AntDesign name="frowno" size={200} color="#e6d9ff" />
-              <Text className="mt-5 text-2xl font-pregular text-h400">{error}</Text>
+              <Text className="mt-5 text-2xl font-pregular text-h400">
+                {error}
+              </Text>
             </View>
           </>
         ) : null}
         {dsaData ? (
           <>
             <View className="px-5 pt-7 pb-24">
-              <Text className="text-3xl font-psemibold mb-1">{dsaData.name}</Text>
+              <Text className="text-3xl font-psemibold mb-1">
+                {dsaData.name}
+              </Text>
               <Text className="text-xl text-h400 font-pregular mb-5">
                 Data Structure
               </Text>
@@ -59,18 +63,32 @@ const DSAItem = () => {
                 </Text>
               </View>
               <View className="w-full flex-row justify-between px-1 rounded-xl mb-5">
-                <Link href={{pathname: "/(tabs)/one/complexity", params: { id: id }}} asChild>
+                <Link
+                  href={{
+                    pathname: "/(tabs)/one/complexity",
+                    params: { id: id },
+                  }}
+                  asChild
+                >
                   <TouchableOpacity className=" bg-h300 w-44 h-40 border rounded-2xl">
                     <Text className="text-xl font-pmedium m-4">
                       Time Complexity
                     </Text>
                   </TouchableOpacity>
                 </Link>
-                <TouchableOpacity className=" bg-h300 w-44 h-40 border rounded-2xl">
-                  <Text className="text-xl font-pmedium m-4">
-                    View The Code
-                  </Text>
-                </TouchableOpacity>
+                <Link
+                  href={{
+                    pathname: "/(tabs)/one/codeDisplay",
+                    params: { code: dsaData.code, name: dsaData.name },
+                  }}
+                  asChild
+                >
+                  <TouchableOpacity className=" bg-h300 w-44 h-40 border rounded-2xl">
+                    <Text className="text-xl font-pmedium m-4">
+                      View The Code
+                    </Text>
+                  </TouchableOpacity>
+                </Link>
               </View>
             </View>
           </>

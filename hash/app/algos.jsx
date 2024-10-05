@@ -39,9 +39,6 @@ const Algos = () => {
           <Text className="text-3xl font-psemibold">
             Popular Algorithms
           </Text>
-          <TouchableOpacity onPress={() => navigation.navigate("home")}>
-            <AntDesign name="arrowleft" size={24} color="black" />
-          </TouchableOpacity>
         </View>
         <FlatList data={algos} renderItem={renderAlgoItem} />
       </View>
