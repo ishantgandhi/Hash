@@ -2,7 +2,7 @@ import { Text, View, FlatList, TouchableOpacity, Linking } from "react-native";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import { useNavigation } from "@react-navigation/native"; // Import useNavigation hook
+import { useNavigation } from "@react-navigation/native";
 
 const Algos = () => {
   const [algos, setAlgos] = useState([]);
