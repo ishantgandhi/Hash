@@ -56,7 +56,7 @@ const Complexity = () => {
             <Text className="text-xl text-h400 font-pregular mb-3">
               Time Complexity
             </Text>
-            <View className="w-full h-full">
+            <View className="w-full h-full pb-40">
               <FlatList
                 data={complexitiesArray}
                 renderItem={({ item }) => (

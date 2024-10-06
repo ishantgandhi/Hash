@@ -4,8 +4,8 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const data = [
-  { id: "array", label: "Arrays" },
-  { id: "hashmaps", label: "Hash Maps" },
+  { id: "array", label: "Array" },
+  { id: "hashmap", label: "Hash Map" },
   { id: "linkedlist", label: "Linked List" },
   { id: "stack", label: "Stack" },
   { id: "queue", label: "Queue" },
